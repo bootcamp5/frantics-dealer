@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActionCardService } from './action-card.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'frantics-dealer';
+  constructor(private actionsCards: ActionCardService) {  }
+
+  getItems() {
+    return this.actionsCards.getCards();
+  }
 }
