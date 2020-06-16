@@ -7,9 +7,13 @@ import { ActionCardService } from './action-card.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   constructor(private actionsCards: ActionCardService) {  }
 
   getItems() {
     return this.actionsCards.getCards();
+  }
+  selectAll() {
+    this.actionsCards.selectAll();
   }
 }
