@@ -19,6 +19,56 @@ export class ActionCardService {
         title: 'Communism',
         description: 'Kommunismus!!'
       },
+      {
+        name: 'communism',
+        title: 'Communism',
+        description: 'Kommunismus!!'
+      },
+      {
+        name: 'communism',
+        title: 'Communism',
+        description: 'Kommunismus!!'
+      },
+      {
+        name: 'communism',
+        title: 'Communism',
+        description: 'Kommunismus!!'
+      },
+      {
+        name: 'communism',
+        title: 'Communism',
+        description: 'Kommunismus!!'
+      },
+      {
+        name: 'communism',
+        title: 'Communism',
+        description: 'Kommunismus!!'
+      },
+      {
+        name: 'communism',
+        title: 'Communism',
+        description: 'Kommunismus!!'
+      },
+      {
+        name: 'communism',
+        title: 'Communism',
+        description: 'Kommunismus!!'
+      },
+      {
+        name: 'communism',
+        title: 'Communism',
+        description: 'Kommunismus!!'
+      },
+      {
+        name: 'communism',
+        title: 'Communism',
+        description: 'Kommunismus!!'
+      },
+      {
+        name: 'communism',
+        title: 'Communism',
+        description: 'Kommunismus!!'
+      },
     ];
   }
 
