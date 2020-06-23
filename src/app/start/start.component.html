@@ -1,10 +1,12 @@
 <div>
-    <div *ngFor="let card of getItems()">
-        <input [(ngModel)]="card.selected" type="checkbox"><a [routerLink]="[card.name]" >{{ card.title }}</a>
+    <mat-selection-list (selectionChange)="changed($event)">
+        <mat-list-option *ngFor="let card of getItems()" [selected]="card.selected" ><a [routerLink]="[card.name]" >{{ card.title }}</a></mat-list-option>
+    </mat-selection-list>
+    <div >
+        <!-- <input [(ngModel)]="card.selected" type="checkbox"><a [routerLink]="[card.name]" >{{ card.title }}</a> -->
     </div>
 
-    <button (click)="selectAll()">Select all</button>
-    <button (click)="unselectAll()">Unselect all</button>
-    <button>Start</button>
-
+    <button mat-stroked-button (click)="selectAll()">Select all</button>
+    <button mat-stroked-button (click)="unselectAll()">Unselect all</button>
+    <button mat-raised-button>Start</button>
 </div>

@@ -20,4 +20,8 @@ export class StartComponent {
     this.actionsCards.setAll(false);
   }
 
+  changed(event) {
+    console.log(event);
+  }
+
 }
