@@ -1,11 +1,2 @@
-<div>
-    <div *ngFor="let card of getItems()">
-        <input [(ngModel)]="card.selected" type="checkbox">
-        {{ card.title }}
-    </div>
-
-    <button (click)="selectAll()">Select all</button>
-    <button (click)="unselectAll()">Unselect all</button>
-    <button>Start</button>
-
-</div>
+<div>Hello</div>
+<router-outlet></router-outlet>

@@ -11,6 +11,10 @@ export class ActionCardService {
     return this.cards;
   }
 
+  getCardByName(name: string): ActionCardItem {
+    return this.cards.find(c => c.name === name);
+  }
+
   setAll(value:boolean){
     for(let card of this.cards){
       card.selected = value;

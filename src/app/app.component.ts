@@ -8,15 +8,5 @@ import { ActionCardService } from './action-card.service';
 })
 export class AppComponent {
 
-  constructor(private actionsCards: ActionCardService) {  }
 
-  getItems() {
-    return this.actionsCards.getCards();
-  }
-  selectAll() {
-    this.actionsCards.setAll(true);
-  }
-  unselectAll() {
-    this.actionsCards.setAll(false);
-  }
 }

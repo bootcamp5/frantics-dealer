@@ -1,0 +1,10 @@
+<div>
+    <div *ngFor="let card of getItems()">
+        <input [(ngModel)]="card.selected" type="checkbox"><a [routerLink]="[card.name]" >{{ card.title }}</a>
+    </div>
+
+    <button (click)="selectAll()">Select all</button>
+    <button (click)="unselectAll()">Unselect all</button>
+    <button>Start</button>
+
+</div>
