@@ -11,11 +11,12 @@ export class ActionCardService {
     return this.cards;
   }
 
-  selectAll(){
+  setAll(value:boolean){
     for(let card of this.cards){
-      card.selected = true;
+      card.selected = value;
     }
   }
+  
 
   cards: ActionCardItem[] = [
     {
@@ -27,6 +28,7 @@ export class ActionCardService {
       name: 'parasite',
       title: 'Parasite',
       description: 'Sobald jemand die Runde gewinnt, darf die Person links von ihm/ihr zwei beliebige Handkarten abwerfen, bevor die Punkte gezählt werden.',
+      finish: true,
     },
     {
       name: 'surprise-party',
@@ -240,4 +242,5 @@ export interface ActionCardItem {
   title: string;
   description: string;
   selected?: boolean;
+  finish?: boolean;
 }

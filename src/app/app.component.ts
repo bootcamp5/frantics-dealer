@@ -14,6 +14,9 @@ export class AppComponent {
     return this.actionsCards.getCards();
   }
   selectAll() {
-    this.actionsCards.selectAll();
+    this.actionsCards.setAll(true);
+  }
+  unselectAll() {
+    this.actionsCards.setAll(false);
   }
 }
