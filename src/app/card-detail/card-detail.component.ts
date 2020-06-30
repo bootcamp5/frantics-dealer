@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionCardService, ActionCardItem } from '../action-card.service';
 import { ActivatedRoute } from '@angular/router';
+import { GameService } from '../game.service';
 
 @Component({
   selector: 'app-card-detail',
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CardDetailComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private service: ActionCardService) { }
+  constructor(private route: ActivatedRoute, private service: ActionCardService, public game: GameService ) { }
 
   card: ActionCardItem;
 
