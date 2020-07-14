@@ -9,22 +9,28 @@ export class GameService {
 
   constructor(private router: Router) { }
 
+
+
   private remainingItems: ActionCardItem[];
 
   startGame(list: ActionCardItem[]) {
     this.remainingItems = list.sort(() => Math.random() - 0.5);
+
   }
 
   getRemainingCount() {
     return this.remainingItems?.length;
   }
-
+  isRunning(){
+    return this.remainingItems != null;
+  }
   goToNext() {
     if (this.remainingItems.length > 0) {
       this.router.navigateByUrl('/' + this.remainingItems[0].name);
       this.remainingItems.shift();
     } else {
       this.router.navigateByUrl('/');
+      this.remainingItems = null;
     }
   }
 }
