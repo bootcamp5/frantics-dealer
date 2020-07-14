@@ -11,6 +11,7 @@ export class StartComponent {
 
   constructor(private actionsCards: ActionCardService,private gameService: GameService) {  }
 
+
   getItems() {
     return this.actionsCards.getCards();
   }
