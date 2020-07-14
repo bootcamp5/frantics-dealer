@@ -92,7 +92,8 @@ export class ActionCardService {
     {
       name: 'crowdfunding',
       title: 'Crowdfunding',
-      description: 'Jeder muss der Person mit den wenigsten Handkarten eine Karte schenken. Wichtig: Bei Kartengleichstand wird allen Spieler*innen mit den wenigsten Karten je eine geschenkt. Sofern mehrere Spieler*innen die wenigsten Karten besitzen, müssen sich diese nicht gegenseitig eine Karte schenken.',
+      description: 'Jeder muss der Person mit den wenigsten Handkarten eine Karte schenken.',
+      hint: 'Bei Kartengleichstand wird allen Spieler*innen mit den wenigsten Karten je eine geschenkt. Sofern mehrere Spieler*innen die wenigsten Karten besitzen, müssen sich diese nicht gegenseitig eine Karte schenken.',
     },
     {
       name: 'robin-hood',
@@ -107,7 +108,8 @@ export class ActionCardService {
     {
       name: 'repeat',
       title: 'Repeat',
-      description: 'Wer die Schwarze Karte gespielt hat, muss ein Ereignis erneut ausführen, welches bereits aufgedeckt wurde. Wichtig: Falls noch keine Ereigniskarte aufgedeckt wurde, ist das Ereignis wirkungslos.',
+      description: 'Wer die Schwarze Karte gespielt hat, muss ein Ereignis erneut ausführen, welches bereits aufgedeckt wurde.',
+      hint: 'Falls noch keine Ereigniskarte aufgedeckt wurde, ist das Ereignis wirkungslos.',
     },
     {
       name: 'third-time-lucky',
@@ -122,7 +124,8 @@ export class ActionCardService {
     {
       name: 'charity',
       title: 'Charity',
-      description: 'Jeder Spieler zieht vom Mitspieler mit den meisten Karten auf der Hand eine Karte. Wichtig: Bei Kartengleichstand wird von allen Spielern mit den meisten Karten je eine gezogen. Sofern mehrere Spieler die meisten Karten besitzen, müssen diese nicht voneinander eine Karte ziehen.',
+      description: 'Jeder Spieler zieht vom Mitspieler mit den meisten Karten auf der Hand eine Karte.',
+      hint: 'Bei Kartengleichstand wird von allen Spielern mit den meisten Karten je eine gezogen. Sofern mehrere Spieler die meisten Karten besitzen, müssen diese nicht voneinander eine Karte ziehen.',
     },
     {
       name: 'seeing-eye',
@@ -172,7 +175,8 @@ export class ActionCardService {
     {
       name: 'rewind',
       title: 'Rewind',
-      description: 'Der Reihe nach zieht jede*r Spieler*in die jeweils oberste Karte vom Ablagestapel bis alle total 2 Karten gezogen haben. Anschliessend wird die oberste Karte vom Nachziehstapel aufgedeckt. Auf diese Karte wird nun weitergespielt. Wichtig: Handelt es sich bei der nachträglich aufgedeckten Karte um eine Spezialkarte, kann die Person, die das Ereignis ausgelöst hat, den Effekt ausführen.',
+      description: 'Der Reihe nach zieht jede*r Spieler*in die jeweils oberste Karte vom Ablagestapel bis alle total 2 Karten gezogen haben. Anschliessend wird die oberste Karte vom Nachziehstapel aufgedeckt. Auf diese Karte wird nun weitergespielt.',
+      hint: 'Handelt es sich bei der nachträglich aufgedeckten Karte um eine Spezialkarte, kann die Person, die das Ereignis ausgelöst hat, den Effekt ausführen.',
     },
     {
       name: 'Identity Theft',
@@ -245,6 +249,7 @@ export interface ActionCardItem {
   name: string;
   title: string;
   description: string;
+  hint?: string;
   selected?: boolean;
   finish?: boolean;
 }
