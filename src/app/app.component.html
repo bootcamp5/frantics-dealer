@@ -1,2 +1,12 @@
-<div><h1>Frantic</h1></div>
+<mat-toolbar color="primay">
+    <mat-toolbar-row>
+       <span>Start</span>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row *ngIf="game.isRunning()">
+        <span><button mat-button (click)="game.goToNext()">NEXT ({{ game.getRemainingCount() }})</button></span>
+    </mat-toolbar-row>
+
+</mat-toolbar>
+
 <router-outlet></router-outlet>
