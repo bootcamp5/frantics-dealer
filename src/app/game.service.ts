@@ -11,26 +11,41 @@ export class GameService {
 
 
 
-  private remainingItems: ActionCardItem[];
+  private actionCards: ActionCardItem[];
+
+  private position: number;
 
   startGame(list: ActionCardItem[]) {
-    this.remainingItems = list.sort(() => Math.random() - 0.5);
-
+    this.actionCards = list.sort(() => Math.random() - 0.5);
+    this.position = -1; // goNext() will immediatly increase position to 0
   }
 
-  getRemainingCount() {
-    return this.remainingItems?.length;
-  }
   isRunning(){
-    return this.remainingItems != null;
+    return this.actionCards != null;
   }
-  goToNext() {
-    if (this.remainingItems.length > 0) {
-      this.router.navigateByUrl('/' + this.remainingItems[0].name);
-      this.remainingItems.shift();
+
+  goNext() {
+    this.position++;
+
+    if (this.position < this.actionCards.length ) {
+      this.router.navigateByUrl('/' + this.actionCards[this.position].name);
     } else {
       this.router.navigateByUrl('/');
-      this.remainingItems = null;
+      this.actionCards = null;
+      this.position = null;
     }
   }
+  
+  goBack() {
+    this.router.navigateByUrl('/' + this.actionCards[--this.position].name);
+  }
+
+  getCount() {
+    return this.actionCards.length;
+  }
+
+  getPosition() {
+    return this.position;
+  }
+
 }
