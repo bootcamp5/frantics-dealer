@@ -29,7 +29,7 @@ export class StartComponent {
   startGame(){
     const selectedCards = this.actionsCards.getCards().filter(card => card.selected);
     this.gameService.startGame(selectedCards);
-    this.gameService.goToNext();
+    this.gameService.goNext();
   }
 
 }

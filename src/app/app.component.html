@@ -4,9 +4,11 @@
     </mat-toolbar-row>
 
     <mat-toolbar-row *ngIf="game.isRunning()">
-        <span><button mat-button (click)="game.goToNext()">NEXT ({{ game.getRemainingCount() }})</button></span>
+        <span><button [disabled]="game.getPosition() <= 0" mat-button (click)="game.goBack()">{{ 'back' | uppercase }}</button></span>
+        <span>{{game.getPosition()+1}}/{{game.getCount()}}</span>
+        <span><button mat-button (click)="game.goNext()">{{ 'next' | uppercase }}</button></span>
     </mat-toolbar-row>
 
-</mat-toolbar>
+</mat-toolbar> 
 
 <router-outlet></router-outlet>
